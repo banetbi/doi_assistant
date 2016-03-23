@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DISS_submission publishing_option="0" embargo_code="0" third_party_search="Y">
+  <DISS_authorship>
+    <DISS_author type="primary">
+      <DISS_name>
+        <DISS_surname>Williams</DISS_surname>
+        <DISS_fname>Amy</DISS_fname>
+        <DISS_middle>Elizabeth</DISS_middle>
+        <DISS_suffix/>
+        <DISS_affiliation>College of William and Mary</DISS_affiliation>
+      </DISS_name>
+      <DISS_contact type="current">
+        <DISS_contact_effdt>03/09/2016</DISS_contact_effdt>
+        <DISS_phone_fax type="P">
+          <DISS_cntry_cd>1</DISS_cntry_cd>
+          <DISS_area_code>804</DISS_area_code>
+          <DISS_phone_num>313-0481</DISS_phone_num>
+          <DISS_phone_ext/>
+        </DISS_phone_fax>
+        <DISS_address>
+          <DISS_addrline>1429 North Mt Vernon Ave</DISS_addrline>
+          <DISS_addrline>Apt B</DISS_addrline>
+          <DISS_city>Williamsburg</DISS_city>
+          <DISS_st>VA</DISS_st>
+          <DISS_pcode>23185</DISS_pcode>
+          <DISS_country>US</DISS_country>
+        </DISS_address>
+        <DISS_email>aewilliams@email.wm.edu</DISS_email>
+      </DISS_contact>
+      <DISS_contact type="future">
+        <DISS_contact_effdt>03/09/2016</DISS_contact_effdt>
+        <DISS_phone_fax type="P">
+          <DISS_cntry_cd>1</DISS_cntry_cd>
+          <DISS_area_code>804</DISS_area_code>
+          <DISS_phone_num>313-0481</DISS_phone_num>
+          <DISS_phone_ext/>
+        </DISS_phone_fax>
+        <DISS_address>
+          <DISS_addrline>1429 North Mt Vernon Ave</DISS_addrline>
+          <DISS_addrline>Apt B</DISS_addrline>
+          <DISS_city>Williamsburg</DISS_city>
+          <DISS_st>VA</DISS_st>
+          <DISS_pcode>23185</DISS_pcode>
+          <DISS_country>US</DISS_country>
+        </DISS_address>
+        <DISS_email>aewilliams@email.wm.edu</DISS_email>
+      </DISS_contact>
+      <DISS_citizenship>US</DISS_citizenship>
+      <DISS_orcid/>
+    </DISS_author>
+  </DISS_authorship>
+  <DISS_description page_count="231" type="doctoral" external_id="http://dissertations.umi.com/wmed:10000" apply_for_copyright="yes">
+    <DISS_title>WILLIAMS HIERARCHICAL INTEGRATED MODEL MEASUREMENT:   ASSESSMENT DESIGN, CONSTRUCTION, AND INITIAL VALIDATION</DISS_title>
+    <DISS_dates>
+      <DISS_comp_date>2016</DISS_comp_date>
+      <DISS_accept_date>01/01/2016</DISS_accept_date>
+    </DISS_dates>
+    <DISS_degree>Ph.D.</DISS_degree>
+    <DISS_institution>
+      <DISS_inst_code>0261</DISS_inst_code>
+      <DISS_inst_name>College of William and Mary - School of Education</DISS_inst_name>
+      <DISS_inst_contact>Education</DISS_inst_contact>
+      <DISS_processing_code>F</DISS_processing_code>
+    </DISS_institution>
+    <DISS_advisor>
+      <DISS_name>
+        <DISS_surname>Gressard</DISS_surname>
+        <DISS_fname>Charles</DISS_fname>
+        <DISS_middle>F</DISS_middle>
+      </DISS_name>
+    </DISS_advisor>
+    <DISS_cmte_member>
+      <DISS_name>
+        <DISS_surname>Bracken</DISS_surname>
+        <DISS_fname>Bruce</DISS_fname>
+        <DISS_middle>A</DISS_middle>
+        <DISS_suffix/>
+        <DISS_affiliation/>
+      </DISS_name>
+    </DISS_cmte_member>
+    <DISS_cmte_member>
+      <DISS_name>
+        <DISS_surname>Scott</DISS_surname>
+        <DISS_fname>Sara</DISS_fname>
+        <DISS_middle>A</DISS_middle>
+        <DISS_suffix/>
+        <DISS_affiliation/>
+      </DISS_name>
+    </DISS_cmte_member>
+    <DISS_categorization>
+      <DISS_category>
+        <DISS_cat_code>0347</DISS_cat_code>
+        <DISS_cat_desc>Mental health</DISS_cat_desc>
+      </DISS_category>
+      <DISS_keyword>assessment, Substance use, test development</DISS_keyword>
+      <DISS_language>en</DISS_language>
+    </DISS_categorization>
+  </DISS_description>
+  <DISS_content>
+    <DISS_abstract>
+      <DISS_para>The purpose of this study was to design and pilot an instrument, the WHIMM, that uses the Williams Hierarchical Integrated Model as a foundation for measuring needs met within and outside of substance use for individuals age 18 and older who report previously considering cutting down on alcohol or drug use. Instrument construction and validation were completed using a first pilot (n=200), a pilot one-re-contact (n=50), and a final administration (n=420).  The scale development process allowed for initial validation of the WHIMM, including measurement of inter-item reliability, test-retest reliability, correlation between subscales, and construct validity.  In addition, a scoring metric was developed to allow an individual’s WHIMM results to be interpreted based upon the national normative sample used for the present study.</DISS_para>
+      <DISS_para>	The overall WHIMM and each of the subscales for the Global and Substance Use forms yielded Cronbach’s alpha inter-item reliability coefficients equal to or greater than .90.  Test-retest reliability for the WHIMM Global and Substance Use forms was generally adequate with the majority of subscales producing a minimum test-retest reliability coefficient of .70.  The construct validity tests of the WHIMM demonstrated that the constructs measured by the WHIMM differ substantially from the constructs that are measured by the Alcohol Use Disorders Identification Test (AUDIT; Babor, Higgins-Biddle, Saunders, &amp; Monteiro, 2001) and Drug Abuse Screening Test (DAST; Skinner, 1982).  Exploratory factor analysis loosely supported the Williams Hierarchical Integrated Model’s discrete but interrelated elements. There were statistically-significant differences between scores on the WHIMM Global and WHIMM Substance Use forms.  Implications, limitations, and suggestions for future research are also presented.</DISS_para>
+    </DISS_abstract>
+    <DISS_binary type="PDF">Williams_wmed_0261F_10000.pdf</DISS_binary>
+    <DISS_attachment>
+      <DISS_file_name>20160309132942455.pdf</DISS_file_name>
+      <DISS_file_category>pdf</DISS_file_category>
+      <DISS_file_descr>Signature page</DISS_file_descr>
+    </DISS_attachment>
+    <DISS_attachment>
+      <DISS_file_name>university agreement.pdf</DISS_file_name>
+      <DISS_file_category>pdf</DISS_file_category>
+      <DISS_file_descr>university agreement</DISS_file_descr>
+    </DISS_attachment>
+  </DISS_content>
+  <DISS_restriction/>
+  <DISS_repository>
+    <DISS_version>2016-02-19 07:52:53</DISS_version>
+    <DISS_agreement_decision_date>2016-03-09 14:18:14</DISS_agreement_decision_date>
+    <DISS_acceptance>1</DISS_acceptance>
+    <DISS_delayed_release/>
+    <DISS_access_option/>
+  </DISS_repository>
+  <DISS_creative_commons_license>
+    <DISS_abbreviation>none</DISS_abbreviation>
+  </DISS_creative_commons_license>
+</DISS_submission>

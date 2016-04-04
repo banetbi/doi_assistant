@@ -7,6 +7,8 @@ use DoiAssistant\ProquestSubmissionEtd;
 use Illuminate\Console\Command;
 use PHPExcel;
 use PHPExcel_IOFactory;
+use banetbi\ezid\Ezid;
+use Mail;
 
 class GenerateEtdBatchUpload extends Command
 {
@@ -57,7 +59,7 @@ class GenerateEtdBatchUpload extends Command
      *
      * @var string
      */
-    protected $strETDHeaderRow = "'title','fulltext_url','keywords','abstract','author1_fname','author1_mname','author1_lname','author1_suffix','author1_email','author1_institution','advisor1','advisor2','advisor3','advisor4','advisor5','disciplines','degree_name','department','distribution_license','document_type','embargo_date','language','orcid','publication_date','season','rights'";
+    protected $strETDHeaderRow = "'title','fulltext_url','keywords','abstract','author1_fname','author1_mname','author1_lname','author1_suffix','author1_email','author1_institution','advisor1','advisor2','advisor3','advisor4','advisor5','disciplines','degree_name','department','distribution_license','document_type','doi','embargo_date','language','orcid','publication_date','season','rights','label'";
 
     /**
      * Create a new command instance.
@@ -92,19 +94,46 @@ class GenerateEtdBatchUpload extends Command
         date_default_timezone_set('America/New_York');
 
         $arrProquestSubmissionEtds = ProquestSubmissionEtd::where(['processed' => false])->get();
-        fwrite($this->fileCSVOutput, $this->strETDHeaderRow . "\n");
-        foreach($arrProquestSubmissionEtds as $objProquestSubmissionEtd) {
-            $this->addMetadataRow($objProquestSubmissionEtd->metadata_path);
-            copy($objProquestSubmissionEtd->document_path, getenv('HOMEDIR') . 'public/etds/' . basename($objProquestSubmissionEtd->document_path));
+        if(count($arrProquestSubmissionEtds) > 0) {
+            fwrite($this->fileCSVOutput, $this->strETDHeaderRow . "\n");
+            foreach ($arrProquestSubmissionEtds as $objProquestSubmissionEtd) {
+                $this->addMetadataRow($objProquestSubmissionEtd->metadata_path);
+                $objProquestSubmissionEtd->processed = true;
+                $objProquestSubmissionEtd->save();
+                copy($objProquestSubmissionEtd->document_path, getenv('HOMEDIR') . 'public/etds/' . basename($objProquestSubmissionEtd->document_path));
+            }
+            fclose($this->fileCSVOutput);
+            $objGeneratedCSV = PHPExcel_IOFactory::createReaderForFile($this->strOutputPath . $this->strOutputFileName . '.csv');
+            $objGeneratedCSV->setEnclosure("'");
+            $objWriterXLS = PHPExcel_IOFactory::createWriter($objGeneratedCSV->load($this->strOutputPath . $this->strOutputFileName . '.csv'), 'Excel5');
+            //$objWriterXLS->setEnclosure("''");
+            $objWriterXLS->save($this->strOutputPath . $this->strOutputFileName . '.xls');
+
+            //Mail the spreadsheet to the administrator
+
+            try {
+                Mail::raw('A new ETD batch upload file has been created.  Please review and submit to BePress.', function($message) {
+                    $message->subject('New ETD Batch Upload');
+                    $message->from('noreply@dropinservers.com', 'Justin Dalton');
+                    $message->to('jcdalton@wm.edu', 'Justin Dalton');
+                    $message->attach($this->strOutputPath . $this->strOutputFileName . '.xls');
+                });
+            } catch(\Exception $e) {
+                $this->error('Could not send email.');
+                return;
+            }
+            $this->info('Email sent sucessfully!');
         }
-        fclose($this->fileCSVOutput);
-        $objGeneratedCSV = PHPExcel_IOFactory::createReaderForFile($this->strOutputPath . $this->strOutputFileName . '.csv');
-        $objGeneratedCSV->setEnclosure("'");
-        $objWriterXLS = PHPExcel_IOFactory::createWriter($objGeneratedCSV->load($this->strOutputPath . $this->strOutputFileName . '.csv'), 'Excel5');
-        //$objWriterXLS->setEnclosure("''");
-        $objWriterXLS->save($this->strOutputPath . $this->strOutputFileName . '.xls');
+        else {
+            $this->info("No new etds found. No batch file created.");
+        }
     }
 
+    /**
+     * Converts a single metadata file to a row in the batch upload spreadsheet.
+     *
+     * @param string $strXmlMetadataFile
+     */
     private function addMetadataRow($strXmlMetadataFile) {
         $objXMLMetadata = simplexml_load_file($strXmlMetadataFile);
         $objAuthorship = $objXMLMetadata->DISS_authorship;
@@ -114,8 +143,12 @@ class GenerateEtdBatchUpload extends Command
         $objRepository = $objXMLMetadata->DISS_repository;
         $objCreativeCommonsLicense = $objXMLMetadata->DISS_creative_commons_license;
 
+        $arrMetadata = array();
+
         $strMetadataRow = '';
-        $strMetadataRow .= "'" . mb_convert_case(strtolower($objDescription->DISS_title), MB_CASE_TITLE, "UTF-8") . "',";
+        $strFilteredTitle = mb_convert_case(strtolower($objDescription->DISS_title), MB_CASE_TITLE, "UTF-8");
+        $strMetadataRow .= "'" . $strFilteredTitle . "',";
+        $arrMetadata['datacite.title'] = $strFilteredTitle;
         $strMetadataRow .= "'" . getenv('SERVER_HOME') . '/etds/' . $objContent->DISS_binary . "',";
         $strMetadataRow .= "'" . $objDescription->DISS_categorization->DISS_keyword . "',";
         $strMetadataRow .= "'";
@@ -124,6 +157,10 @@ class GenerateEtdBatchUpload extends Command
             $strMetadataRow .= $strParagraph . ' ';
         }
         $strMetadataRow .= "',";
+        $strCreator = $objAuthorship->DISS_author->DISS_name->DISS_surname . ', ' . $objAuthorship->DISS_author->DISS_name->DISS_fname;
+        $arrMetadata['datacite.creator'] = $strCreator;
+        $arrMetadata['datacite.publisher'] = $objDescription->DISS_institution->DISS_inst_name;
+
         $strMetadataRow .= "'" . $objAuthorship->DISS_author->DISS_name->DISS_fname . "',";
         $strMetadataRow .= "'" . $objAuthorship->DISS_author->DISS_name->DISS_middle . "',";
         $strMetadataRow .= "'" . $objAuthorship->DISS_author->DISS_name->DISS_surname . "',";
@@ -163,27 +200,23 @@ class GenerateEtdBatchUpload extends Command
             }
         }
         else {
-            $this->info('There is only one advisor in the mix.');
+            //$this->info('There is only one advisor in the mix.');
             $strMetadataRow .= "'" . $objDescription->DISS_advisor->DISS_name->DISS_fname . ' ' . $objDescription->DISS_advisor->DISS_name->DISS_middle . ' ' . $objDescription->DISS_advisor->DISS_name->DISS_surname . "',";
             $intRemaining = 4;
             $this->info('I need ' . $intRemaining . ' spots filled.');
             $this->info(count($objDescription->DISS_cmte_member) . ' is total number of commitee members.');
             if(count($objDescription->DISS_cmte_member) > 1) {
-                $this->info('I have an array of commitee members.');
                 if(count($objDescription->DISS_cmte_member) >= $intRemaining) {
-                    $this->info('I have more commitee members ' . count($objDescription->DISS_cmte_member) . ' than spots to fill ' . $intRemaining);
                     for($i=0; $i<$intRemaining; $i++) {
                         $strMetadataRow .= "'" . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_fname . ' ' . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_middle . ' ' . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_surname . "',";
                     }
                 }
                 else {
-                    $this->info('I need to put in a few more blanks because I have ' . count($objDescription->DISS_cmte_member) . ' comitee members and ' . $intRemaining . ' spots to fill.');
                     $intRemaining -= count($objDescription->DISS_cmte_member);
                     for($i=0; $i<(count($objDescription->DISS_cmte_member)); $i++) {
                         $this->info("'" . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_fname . ' ' . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_middle . ' ' . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_surname . "',");
                         $strMetadataRow .= "'" . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_fname . ' ' . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_middle . ' ' . $objDescription->DISS_cmte_member[$i]->DISS_name->DISS_surname . "',";
                     }
-                    $this->info('Filling in ' . $intRemaining . ' blanks.');
                     for($i=0; $i<$intRemaining; $i++) {
                         $this->info($i . ' ...');
                         $strMetadataRow .= "' ',";
@@ -227,6 +260,20 @@ class GenerateEtdBatchUpload extends Command
         else {
             $strMetadataRow .= "'thesis',";
         }
+        $strLabelTime = time();
+        $arrMetadata['datacite.publicationyear'] = date('Y', strtotime($objRepository->DISS_agreement_decision_date));
+        $arrMetadata['datacite.resourcetype'] = 'Text';
+        $arrMetadata['_target'] = getenv('ETD_IR_BASEURL') . '/' . $strLabelTime;
+
+        try {
+            $strDOI = $this->createDOI($arrMetadata, $strLabelTime, Ezid::IDENTIFIER_TYPE_DOI);
+        } catch (\Exception $e) {
+            $strDOI = '';
+        }
+        if(substr($strDOI, 0, 1) !== 'd') {
+            $strDOI = "";
+        }
+        $strMetadataRow .= "'" . $strDOI . "',";
         $this->info($objXMLMetadata->attributes()->embargo_code . ' is embargo code.');
         if((string)$objXMLMetadata->attributes()->embargo_code === '0') {
             $strMetadataRow .= "'0',";
@@ -247,11 +294,41 @@ class GenerateEtdBatchUpload extends Command
         $strMetadataRow .= $this->getLanguageByAbbreviation($objDescription->DISS_categorization->DISS_language) . ",";
         $strMetadataRow .= "'',";
         $arrAgreementDecisionDate = explode(" ", $objRepository->DISS_agreement_decision_date);
+
         $strMetadataRow .= "'" . $arrAgreementDecisionDate[0] . "',";
         $strMetadataRow .= "'" . $this->getCurrentSeason() . "',";
-        $strMetadataRow .= "'None'";
+        $strMetadataRow .= "'None',";
+
+        $strMetadataRow .= "'" . $strLabelTime . "'";
+
+
         fwrite($this->fileCSVOutput, $strMetadataRow . "\n");
-        $this->info(print($strMetadataRow));
+        
+        //$this->info(print($strMetadataRow));
+    }
+
+    /**
+     * @param array $arrMetadata
+     * @param string $strLabelTime
+     * @param int $intIdentifierType
+     * @return string
+     * @throws \Exception
+     */
+    private function createDOI($arrMetadata, $strLabelTime, $intIdentifierType) {
+        $objEzid = new Ezid(getenv('EZID_USERNAME'), getenv('EZID_PASSWORD'), getenv('DOI_SHOULDER'), getenv('ARK_SHOULDER'));
+        $strResponse = $objEzid->mintIdentifier(getenv('DOI_SHOULDER'), $intIdentifierType, $arrMetadata);
+        if(strpos($strResponse, 'success') !== false) {
+            $arrResponse = explode('|', $strResponse);
+            $arrDOI = explode(" ", $arrResponse[0]);
+            $this->info(print_r($strResponse));
+            $this->info("DOI is " . $arrDOI[1] . "\n");
+            return $arrDOI[1];
+        }
+        else {
+            $this->info(print_r($strResponse));
+            return $strResponse;
+        }
+
     }
 
     /**
@@ -318,57 +395,6 @@ class GenerateEtdBatchUpload extends Command
                 $strReturnLanguage = "'English'";
         }
         return $strReturnLanguage;
-    }
-
-    private function transformEtdXml($strXmlMetadataFile) {
-        // Create new PHPExcel object
-        $objPHPExcel = new PHPExcel();
-
-        // Set document properties
-        $objPHPExcel->getProperties()->setCreator("William & Mary Libraries")
-            ->setLastModifiedBy("DOI Assistant")
-            ->setTitle("ETD Batch Upload File" . date('Y-m-d'))
-            ->setSubject("ETD Batch Upload File")
-            ->setDescription("Batch Upload for Recently Submitted ETDs")
-            ->setKeywords("ETD");
-
-
-        // Add some data
-        $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A1', 'Hello')
-            ->setCellValue('B2', 'world!')
-            ->setCellValue('C1', 'Hello')
-            ->setCellValue('D2', 'world!');
-
-        // Miscellaneous glyphs, UTF-8
-        $objPHPExcel->setActiveSheetIndex(0)
-            ->setCellValue('A4', 'Miscellaneous glyphs')
-            ->setCellValue('A5', 'éàèùâêîôûëïüÿäöüç');
-
-        // Rename worksheet
-        $objPHPExcel->getActiveSheet()->setTitle('Simple');
-
-
-        // Set active sheet index to the first sheet, so Excel opens this as the first sheet
-        $objPHPExcel->setActiveSheetIndex(0);
-
-
-        // Redirect output to a client’s web browser (Excel2007)
-        header('Content-Type: application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
-        header('Content-Disposition: attachment;filename="01simple.xlsx"');
-        header('Cache-Control: max-age=0');
-        // If you're serving to IE 9, then the following may be needed
-        header('Cache-Control: max-age=1');
-
-        // If you're serving to IE over SSL, then the following may be needed
-        header ('Expires: Mon, 26 Jul 1997 05:00:00 GMT'); // Date in the past
-        header ('Last-Modified: '.gmdate('D, d M Y H:i:s').' GMT'); // always modified
-        header ('Cache-Control: cache, must-revalidate'); // HTTP/1.1
-        header ('Pragma: public'); // HTTP/1.0
-
-        $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-        $objWriter->save('php://output');
-        exit;
     }
 
     /**

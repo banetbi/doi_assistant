@@ -156,6 +156,8 @@ return [
         DoiAssistant\Providers\EventServiceProvider::class,
         DoiAssistant\Providers\RouteServiceProvider::class,
 
+        Zofe\Rapyd\RapydServiceProvider::class,
+
     ],
 
     /*

@@ -3,9 +3,9 @@
 namespace DoiAssistant\Http\Controllers;
 
 use DoiAssistant\Http\Requests;
-use DoiAssistant\ProquestSubmissionEtd;
+use DoiAssistant\ProquestSubmissionEtd as Etd;
 use Illuminate\Http\Request;
-
+use Zofe\Rapyd\DataGrid\DataGrid;
 class HomeController extends Controller
 {
     /**
@@ -25,7 +25,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $arrProquestEtds = ProquestSubmissionEtd::where('processed', 0);
-        return view('home', array('arrProquestEtds' =>$arrProquestEtds));
+        return view('welcome');
     }
 }

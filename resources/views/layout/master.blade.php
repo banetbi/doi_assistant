@@ -35,6 +35,10 @@
             </button>
             <a class="navbar-brand" href="#">DOI Assistant</a>
         </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li><a href="/etds">ETDs</a></li>
+            <li><a href="/datasets">Data Sets</a></li>
+        </ul>
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right">
             <!-- Authentication Links -->
@@ -63,7 +67,7 @@
 
 <footer class="footer">
     <div class="container">
-        <p class="text-muted">&copy; {{{date('Y')}}} William & Mary Libraries</p>
+        <p class="text-muted">&copy; {{date('Y')}} William & Mary Libraries</p>
     </div>
 </footer>
 

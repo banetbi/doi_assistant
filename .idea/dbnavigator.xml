@@ -22,7 +22,7 @@
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
-    <show-object-properties value="true" />
+    <show-object-properties value="false" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
@@ -47,6 +47,7 @@ from
     <filter-list connection-id="859232fe-6d25-40f3-9208-cb1c7767ab70" dataset="swem_doi_assist.proquest_submission_etds" active-filter-id="f2c0fc0f-92fe-49a6-96d7-9fbb3e9207ac">
       <filter id="f2c0fc0f-92fe-49a6-96d7-9fbb3e9207ac" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
     </filter-list>
+    <filter-list connection-id="859232fe-6d25-40f3-9208-cb1c7767ab70" dataset="swem_doi_assist.jobs" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />

@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Jumbotron Template for Bootstrap</title>
+    <title>Submission Mediator</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/css/app.css" rel="stylesheet">
@@ -33,11 +33,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">DOI Assistant</a>
+            <a class="navbar-brand" href="#">Submission Mediator</a>
         </div>
         <ul class="nav navbar-nav navbar-left">
-            <li><a href="/etds">ETDs</a></li>
-            <li><a href="/datasets">Data Sets</a></li>
+            <li><a href="/etd">ETDs</a></li>
+            <li><a href="/dataset">Data Sets</a></li>
+            <li><a href="/multimedia">Multimedia</a></li>
         </ul>
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right">

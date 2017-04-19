@@ -39,6 +39,7 @@
             <li><a href="/etd">ETDs</a></li>
             <li><a href="/dataset">Data Sets</a></li>
             <li><a href="/multimedia">Multimedia</a></li>
+            <li><a href="/spreadsheet">Spreadsheet</a></li>
         </ul>
         <!-- Right Side Of Navbar -->
         <ul class="nav navbar-nav navbar-right">

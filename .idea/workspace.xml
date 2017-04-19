@@ -1,28 +1,567 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee0d23a8-cd1e-4634-8c79-618a8070bd08" name="Default" comment="Fixed missing glyphicons. &#10;Refactored to split out ETD and Dataset managment.&#10;Added email sending to batch upload generation using mailgun.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/doi_assistant_node_modules.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.phar" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/etds/Williams_wmed_0261F_10000.pdf" afterPath="$PROJECT_DIR$/public/etds/Williams_wmed_0261F_10000.pdf" />
+    <list default="true" id="ee0d23a8-cd1e-4634-8c79-618a8070bd08" name="Default" comment="Added spreadsheet upload and most of processing for registration.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/AliagaSoplin_wmgrad_0261E_10027.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/AliagaSoplin_wmgrad_0261E_10027.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Atanasov_wmed_0261F_10022.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ayala_wmgrad_0261N_10036.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ayala_wmgrad_0261N_10036.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Barger_wmed_0261F_10028.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Barger_wmed_0261F_10028.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Barger_wmed_0261F_10028.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Bienlien_vims_0261P_10001.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Bienlien_vims_0261P_10001.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Braunstein_wmgrad_0261N_10092.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Braunstein_wmgrad_0261N_10092.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Braunstein_wmgrad_0261N_10092.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Bryant_wmgrad_0261E_10015.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Bryant_wmgrad_0261E_10015.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Butler_wmed_0261F_10010.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Byun_wmgrad_0261N_10081.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Byun_wmgrad_0261N_10081.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Byun_wmgrad_0261N_10081.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cartwright_wmgrad_0261N_10056.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cartwright_wmgrad_0261N_10056.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cartwright_wmgrad_0261N_10056.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Chak_vims_0261D_10000.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Chak_vims_0261D_10000.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Chappell_wmgrad_0261N_10077.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Chappell_wmgrad_0261N_10077.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Chappell_wmgrad_0261N_10077.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/CitarelliJones_wmed_0261F_10007.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Conroy_vims_0261D_10007.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Conroy_vims_0261D_10007.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cook_wmgrad_0261N_10067.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cook_wmgrad_0261N_10067.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cook_wmgrad_0261N_10067.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cornejo_wmgrad_0261E_10100.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cornejo_wmgrad_0261E_10100.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cornejo_wmgrad_0261E_10100.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Costis_wmed_0261F_10024.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cummings_wmgrad_0261E_10007.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cummings_wmgrad_0261E_10007.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cuthbertson_wmgrad_0261N_10038.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cuthbertson_wmgrad_0261N_10038.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cyrus_wmgrad_0261N_10029.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Cyrus_wmgrad_0261N_10029.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Daen_wmgrad_0261E_10094.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Daen_wmgrad_0261E_10094.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Daen_wmgrad_0261E_10094.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Dean_vims_0261P_10008.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Dean_vims_0261P_10008.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Dean_vims_0261P_10008.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Dickinson_wmgrad_0261E_10005.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Dickinson_wmgrad_0261E_10005.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Dodenhoff_wmgrad_0261E_10042.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Dodenhoff_wmgrad_0261E_10042.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Emanuel_wmgrad_0261N_10055.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Emanuel_wmgrad_0261N_10055.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Emanuel_wmgrad_0261N_10055.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Fang_wmgrad_0261E_10020.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Fang_wmgrad_0261E_10020.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Finnegan_wmed_0261F_10004.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Fischer_wmgrad_0261N_10102.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Fischer_wmgrad_0261N_10102.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Fischer_wmgrad_0261N_10102.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gable_wmgrad_0261E_10111.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gable_wmgrad_0261E_10111.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gable_wmgrad_0261E_10111.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gastilo_wmgrad_0261N_10025.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gastilo_wmgrad_0261N_10025.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gastilo_wmgrad_0261N_10025.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gayle_wmgrad_0261N_10011.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Gayle_wmgrad_0261N_10011.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Graham_wmgrad_0261E_10008.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Graham_wmgrad_0261E_10008.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Greene_wmed_0261F_10003.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Greene_wmgrad_0261N_10057.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Greene_wmgrad_0261N_10057.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Greene_wmgrad_0261N_10057.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Harris_wmed_0261F_10014.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Harris_wmgrad_0261N_10024.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Harris_wmgrad_0261N_10024.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Harris_wmgrad_0261N_10024.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hendricks_wmed_0261F_10018.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hill_wmgrad_0261E_10012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hill_wmgrad_0261E_10012.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hocker_wmgrad_0261E_10071.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hocker_wmgrad_0261E_10071.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hocker_wmgrad_0261E_10071.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hodges_wmed_0261F_10023.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hunt_wmgrad_0261E_10076.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hunt_wmgrad_0261E_10076.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hunt_wmgrad_0261E_10076.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Hunter_wmed_0261F_10015.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ingrassia_wmgrad_0261N_10105.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ingrassia_wmgrad_0261N_10105.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ingrassia_wmgrad_0261N_10105.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Jibo_wmgrad_0261N_10089.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Jibo_wmgrad_0261N_10089.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Jibo_wmgrad_0261N_10089.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Jones_wmgrad_0261E_10098.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Jones_wmgrad_0261E_10098.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Jones_wmgrad_0261E_10098.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Karp_vims_0261P_10002.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Karp_vims_0261P_10002.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Kelly_wmed_0261F_10008.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Koech_wmgrad_0261N_10074.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Koech_wmgrad_0261N_10074.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Koech_wmgrad_0261N_10074.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Laeuchli_wmgrad_0261E_10014.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Laeuchli_wmgrad_0261E_10014.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/LinaresVasquez_wmgrad_0261E_10058.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/LinaresVasquez_wmgrad_0261E_10058.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/LinaresVasquez_wmgrad_0261E_10058.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Magee_wmgrad_0261E_10044.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Magee_wmgrad_0261E_10044.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Mahoney_wmed_0261F_10009.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Mammadov_wmed_0261F_10021.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Marquis_wmgrad_0261N_10066.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Marquis_wmgrad_0261N_10066.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Marquis_wmgrad_0261N_10066.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Matthews_wmgrad_0261N_10078.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Matthews_wmgrad_0261N_10078.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Matthews_wmgrad_0261N_10078.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Maza_wmgrad_0261N_10086.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Maza_wmgrad_0261N_10086.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Maza_wmgrad_0261N_10086.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/McCullough_wmgrad_0261N_10060.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/McCullough_wmgrad_0261N_10060.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/McCullough_wmgrad_0261N_10060.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Meyers_wmed_0261F_10005.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Miller_wmed_0261F_10006.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Mitchell_wmgrad_0261N_10082.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Mitchell_wmgrad_0261N_10082.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Mitchell_wmgrad_0261N_10082.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Moore_wmgrad_0261E_10068.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Moore_wmgrad_0261E_10068.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Moore_wmgrad_0261E_10068.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Munda_wmgrad_0261N_10106.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Munda_wmgrad_0261N_10106.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Munda_wmgrad_0261N_10106.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/NguyenTien_wmgrad_0261E_10019.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/NguyenTien_wmgrad_0261E_10019.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Novak_wmgrad_0261E_10061.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Novak_wmgrad_0261E_10061.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Novak_wmgrad_0261E_10061.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Okerson_wmed_0261F_10013.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/OlsenHarbich_wmgrad_0261N_10028.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/OlsenHarbich_wmgrad_0261N_10028.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Osborne_wmgrad_0261N_10059.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Osborne_wmgrad_0261N_10059.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Osborne_wmgrad_0261N_10059.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Pease_vims_0261P_10005.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Pease_vims_0261P_10005.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Penn_wmgrad_0261N_10107.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Penn_wmgrad_0261N_10107.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Penn_wmgrad_0261N_10107.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Piper_wmgrad_0261E_10022.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Piper_wmgrad_0261E_10022.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Piper_wmgrad_0261E_10022.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Qin_wmgrad_0261E_10021.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Qin_wmgrad_0261E_10021.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Qu_wmgrad_0261E_10073.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Qu_wmgrad_0261E_10073.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Qu_wmgrad_0261E_10073.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Radue_wmgrad_0261E_10087.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Radue_wmgrad_0261E_10087.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Radue_wmgrad_0261E_10087.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ramos_wmgrad_0261E_10054.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ramos_wmgrad_0261E_10054.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ramos_wmgrad_0261E_10054.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ray_wmgrad_0261N_10103.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ray_wmgrad_0261N_10103.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Ray_wmgrad_0261N_10103.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Roberts_wmgrad_0261N_10050.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Roberts_wmgrad_0261N_10050.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Roberts_wmgrad_0261N_10050.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/RodriguezVega_wmgrad_0261E_10048.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/RodriguezVega_wmgrad_0261E_10048.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/RodriguezVega_wmgrad_0261E_10048.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Roege_wmed_0261F_10025.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Runge_wmed_0261F_10019.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Scholz_wmgrad_0261N_10002.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Scholz_wmgrad_0261N_10002.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Scholz_wmgrad_0261N_10002.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/ScuraTrovato_wmgrad_0261N_10026.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/ScuraTrovato_wmgrad_0261N_10026.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/ScuraTrovato_wmgrad_0261N_10026.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Seward_wmgrad_0261N_10034.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Seward_wmgrad_0261N_10034.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Seward_wmgrad_0261N_10034.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Sikk_wmgrad_0261E_10047.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Sikk_wmgrad_0261E_10047.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Sikk_wmgrad_0261E_10047.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Simpson_wmgrad_0261E_10070.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Simpson_wmgrad_0261E_10070.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Simpson_wmgrad_0261E_10070.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Slattery_wmgrad_0261N_10109.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Slattery_wmgrad_0261N_10109.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Slattery_wmgrad_0261N_10109.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Smith_wmed_0261F_10012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Smith_wmgrad_0261N_10083.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Smith_wmgrad_0261N_10083.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Smith_wmgrad_0261N_10083.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Stallings_wmgrad_0261E_10095.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Stallings_wmgrad_0261E_10095.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Stallings_wmgrad_0261E_10095.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Staudt_wmed_0261F_10002.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Stone_vims_0261D_10006.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Stone_vims_0261D_10006.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Strickland_wmgrad_0261N_10108.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Strickland_wmgrad_0261N_10108.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Strickland_wmgrad_0261N_10108.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Tarantino_wmed_0261F_10016.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Tirak_wmgrad_0261E_10072.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Tirak_wmgrad_0261E_10072.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Tirak_wmgrad_0261E_10072.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Trace_wmed_0261F_10011.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Vo_wmgrad_0261N_10091.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Vo_wmgrad_0261N_10091.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Vo_wmgrad_0261N_10091.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Vreeland_wmed_0261F_10017.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wallace_wmgrad_0261E_10037.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wallace_wmgrad_0261E_10037.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wan_wmgrad_0261N_10030.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wan_wmgrad_0261N_10030.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wang_wmgrad_0261E_10045.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wang_wmgrad_0261E_10045.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wang_wmgrad_0261E_10045.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wang_wmgrad_0261E_10053.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wang_wmgrad_0261E_10053.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wang_wmgrad_0261E_10053.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wen_wmgrad_0261N_10052.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wen_wmgrad_0261N_10052.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wen_wmgrad_0261N_10052.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wolf_wmgrad_0261N_10064.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wolf_wmgrad_0261N_10064.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wolf_wmgrad_0261N_10064.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wu_wmgrad_0261E_10079.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wu_wmgrad_0261E_10079.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Wu_wmgrad_0261E_10079.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Xu_wmgrad_0261E_10018.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Xu_wmgrad_0261E_10018.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Yan_wmgrad_0261E_10031.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Yan_wmgrad_0261E_10031.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Yang_wmgrad_0261E_10065.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Yang_wmgrad_0261E_10065.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Yang_wmgrad_0261E_10065.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Zappalla_wmgrad_0261N_10035.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Zappalla_wmgrad_0261N_10035.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Zhang_wmgrad_0261N_10088.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Zhang_wmgrad_0261N_10088.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Zhang_wmgrad_0261N_10088.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Zhuang_wmgrad_0261N_10023.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/etds/Zhuang_wmgrad_0261N_10023.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/img/bootstrap-colorpicker/alpha-horizontal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/img/bootstrap-colorpicker/alpha.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/img/bootstrap-colorpicker/hue-horizontal.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/img/bootstrap-colorpicker/hue.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/img/bootstrap-colorpicker/saturation.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.eot" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/rapyd-laravel.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/img/icons.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/styledform.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/BarrJustin2012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/Benedictis-KessnerJustin2011.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/BettgeThomas2013.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/BowlenJoanZimmermanPeter2008.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/BrownKatherine2013.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/CorbettAllison2009.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/DeSotoKurt2009.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/FigliuoliEleonora2012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/GiovanniJustine2011.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/GivensChristopher2010.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/GriceEve2010.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/HelsleyKaitlin2012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/KimMason2009.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/KramerAshley2008.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/KumahStephanie2012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/LandichoRobert2008.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/LauerBenjamin2013.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/MatthewDembo2011.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/OMealiaSean2009.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/SardoMichael2011.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/SiedowErik2010.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/SmithMichael2011.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/SoosiahJoseph2012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/theses/SparacinoMatthew2012.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-03-30.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-04-04.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-04-06.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-04-19.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-05-16.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-07-19.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-07-26.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-09-20.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-10-21.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-10-24.xls" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-12-07.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2017-01-23.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2017-04-17.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_412432/Williams_wmed_0261F_704/university agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_415374/Seward_wmgrad_0261N_705/table of contents.docx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_415374/Seward_wmgrad_0261N_705/table of contents.docx-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_415374/Seward_wmgrad_0261N_705/table of contents.docx-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_415374/Seward_wmgrad_0261N_705/table of contents.docx-1.4.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_417065/Staudt_wmed_0261F_704/Dissertation Defense Verification Staudt.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_417065/Staudt_wmed_0261F_704/University Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_419454/Greene_wmed_0261F_10003.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_419454/Greene_wmed_0261F_704/Dissertation Verification.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_419454/Greene_wmed_0261F_704/University Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_419491/Finnegan_wmed_0261F_704/University Agreement Form-signed.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_419491/Finnegan_wmed_0261F_704/University Agreement Form-signed.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_419491/Finnegan_wmed_0261F_704/Verification form 20160307141129569 (1).pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_420903/Meyers_wmed_0261F_704/Dissertation Defense Verification.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_424606/Miller_wmed_0261F_704/Dissertation Defense Form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_424606/Miller_wmed_0261F_704/IR Form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_424606/Miller_wmed_0261F_704/IR Form.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_424714/CitarelliJones_wmed_0261F_704/Verification form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_424714/CitarelliJones_wmed_0261F_704/Verification form.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_424714/CitarelliJones_wmed_0261F_704/WM Institutional Repository Form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_425951/Kelly_wmed_0261F_704/Institutional Repository (IR) agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_425951/Kelly_wmed_0261F_704/Verification Form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_425951/Kelly_wmed_0261F_704/Verification Form.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_426242/Butler_wmed_0261F_704/Dissertation Defense Verification .pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_426242/Butler_wmed_0261F_704/Dissertation Defense Verification .pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_426242/Butler_wmed_0261F_704/Univeristy Agreement-signed.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_426567/Trace_wmed_0261F_704/Verification form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_427611/Smith_wmed_0261F_704/Defense verification form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_427611/Smith_wmed_0261F_704/Defense verification form.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_427611/Smith_wmed_0261F_704/License agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_429012/Harris_wmed_0261F_704/Diss Defense Verification_Harris.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_429012/Harris_wmed_0261F_704/Harris_WM IR Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_429012/Harris_wmed_0261F_704/Harris_WM IR Agreement.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430148/Hunter_wmed_0261F_704/Distribution Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430148/Hunter_wmed_0261F_704/Distribution Agreement.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430148/Hunter_wmed_0261F_704/Verification Form .pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430405/Tarantino_wmed_0261F_704/Defense Verification form - signed.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430405/Tarantino_wmed_0261F_704/Institutional Repository Form - signed.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430405/Tarantino_wmed_0261F_704/Institutional Repository Form - signed.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430691/Vreeland_wmed_0261F_704/IR agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430691/Vreeland_wmed_0261F_704/Verification Form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_430691/Vreeland_wmed_0261F_704/Verification Form.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_431495/Hendricks_wmed_0261F_704/img001 copy.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_431573/Runge_wmed_0261F_704/Runge IR Form.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_431573/Runge_wmed_0261F_704/Runge--Dissertation Defense Verification.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_431573/Runge_wmed_0261F_704/Runge--Dissertation Defense Verification.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_431929/Atanasov_wmed_0261F_704/Dissertation Defense Verification.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_431929/Atanasov_wmed_0261F_704/Dissertation Defense Verification.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_431929/Atanasov_wmed_0261F_704/Wx26M Institutional Repository Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432004/Hodges_wmed_0261F_704/Defense Verification Form_Hodges.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432004/Hodges_wmed_0261F_704/Wx26M IR Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432004/Hodges_wmed_0261F_704/Wx26M IR Agreement.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432131/Costis_wmed_0261F_704/PACostis Verification Form Bx26W.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432131/Costis_wmed_0261F_704/Signed Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432131/Costis_wmed_0261F_704/Signed Agreement.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432246/Roege_wmed_0261F_704/ProQuest Agreement.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432246/Roege_wmed_0261F_704/ProQuest Agreement.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_432246/Roege_wmed_0261F_704/roege_defense verification.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_440106/Wolf_wmgrad_0261N_10064.pdf-1.4.pdf-1.4.pdf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/php.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/SpreadsheetController.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Shoulder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/ShoulderType.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Spreadsheet.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2016_12_07_175040_create_spreadsheets_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2017_04_17_150000_create_shoulder_type_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/migrations/2017_04_17_150021_create_shoulders_table.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/ShoulderSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/database/seeds/ShoulderTypeSeeder.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/output.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/autocomplete.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/bloodhound.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/bootstrap-tagsinput.min.js.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/jquery.autocomplete.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/autocomplete/typeahead.bundle.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/css/bootstrap-colorpicker.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/css/bootstrap-colorpicker.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/js/bootstrap-colorpicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/colorpicker/js/bootstrap-colorpicker.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datatree/css/datatree.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datatree/js/datatree.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datatree/js/nestable/README.md" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datatree/js/nestable/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datatree/js/nestable/jquery.nestable.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/bootstrap-datepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/datepicker3.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.az.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.cy.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.et.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.fa.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.gl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ka.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.kk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.kr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.mk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.nl-BE.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.rs-latin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.rs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.sq.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.sw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.vi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datepicker/locales/bootstrap-datepicker.zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/bootstrap-datetimepicker.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/datetimepicker3.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ar.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.bg.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ca.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.cs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.da.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ee.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.el.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.es.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.fi.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.he.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.hr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.hu.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.id.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.is.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.it.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ja.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ko.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.lt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ms.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.nb.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.nl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.no.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.pt-BR.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.pt.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ro.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.rs-latin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.rs.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.sk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.sl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.sv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.sw.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.th.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.tr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.uk.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.zh-CN.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/datetimepicker/locales/bootstrap-datetimepicker.zh-TW.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/demo/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/css/bootstrap-theme.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/css/bootstrap.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/css/bootstrap.css.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/js/bootstrap.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/jquery/dist/jquery.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/jquery/dist/jquery.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/jquery/dist/jquery.min.map" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/riotjs/compiler.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/riotjs/riot+compiler.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/lib/riotjs/riot.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/rapyd.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/css/docstyle.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/css/redactor.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/css/style.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/css/wym.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/jquery.browser.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/de.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/en.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/fr.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/lv.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/pl.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/pt_br.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/ru.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/langs/ua.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/plugins/file.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/plugins/image.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/plugins/image_edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/plugins/link.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/plugins/table.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/plugins/video.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/redactor.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/redactor.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/toolbars/default.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/redactor/toolbars/mini.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/seopreview/seopreview.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/seopreview/seopreview.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/tags/dataembed.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/packages/zofe/rapyd/assets/template/handlebars.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/sample/sample_player.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-03-30.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-04-04.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-04-19.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-05-16.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-10-21.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-10-24.csv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/etds/etdadmin_upload_446120/Fischer_wmgrad_0261N_10102_DATA.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/spreadsheet/create.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/spreadsheet/index.blade.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/spreadsheet/show.blade.php" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/etds/etdadmin_upload_412085/Williams_wmed_0261F_10000.pdf" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/etds/etdadmin_upload_412085/Williams_wmed_0261F_10000_DATA.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/resources/etds/etdadmin_upload_412085/Williams_wmed_0261F_704/20160309132942455.pdf" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Console/Commands/GenerateEtdBatchUpload.php" afterPath="$PROJECT_DIR$/app/Console/Commands/GenerateEtdBatchUpload.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/DatasetController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/DatasetController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/EtdController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/EtdController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/routes.php" afterPath="$PROJECT_DIR$/app/Http/routes.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/doi_assistant.iml" afterPath="$PROJECT_DIR$/doi_assistant.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/etd/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/etd/index.blade.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layout/master.blade.php" afterPath="$PROJECT_DIR$/resources/views/layout/master.blade.php" />
     </list>
     <list id="dd7354bc-539a-4e81-ab1b-101355f0fa1d" name="Rejected commit: Default" comment="Fixed missing glyphicons. &#10;Refactored to split out ETD and Dataset managment.&#10;Added email sending to batch upload generation using mailgun.">
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-03-22.csv" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-03-22.xls" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bootstrap/cache/.gitignore" afterPath="$PROJECT_DIR$/bootstrap/cache/.gitignore" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
     </list>
     <ignored path="doi_assistant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -35,20 +574,31 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings">
+  <component name="ComposerSettings" phpInterpreterId="a34e038e-3418-418d-ab22-6158e3a1d32e">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
     <pharPath>$PROJECT_DIR$/composer.phar</pharPath>
-    <phpPath>/usr/bin/php</phpPath>
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
   <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
     <option name="GROUP_SCHEMA" value="true" />
     <option name="GROUP_CONTENTS" value="false" />
     <option name="SORT_POSITIONED" value="false" />
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <PATH>
+      <PATH_ELEMENT>
+        <option name="myItemId" />
+        <option name="myItemType" value="com.intellij.database.view.DatabaseStructure$Root" />
+      </PATH_ELEMENT>
+      <PATH_ELEMENT>
+        <option name="myItemId" value="@localhost" />
+        <option name="myItemType" value="com.intellij.database.view.DbNodeDescriptor" />
+      </PATH_ELEMENT>
+    </PATH>
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
@@ -56,105 +606,93 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/app.php">
+      <file leaf-file-name="ShoulderTypeSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/ShoulderTypeSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7">
-              <caret line="158" column="47" selection-start-line="158" selection-start-column="47" selection-end-line="158" selection-end-column="47" />
+            <state relative-caret-position="234">
+              <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="filesystems.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/filesystems.php">
+      <file leaf-file-name="ShoulderType.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/ShoulderType.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-233">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="144">
+              <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EtdController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EtdController.php">
+      <file leaf-file-name="Spreadsheet.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Spreadsheet.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+            <state relative-caret-position="162">
+              <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="database.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/database.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-263">
-              <caret line="59" column="49" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SYLK.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/SYLK.php">
+      <file leaf-file-name="Shoulder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Shoulder.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Degree.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Degree.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseSeeder.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DegreesTableSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/DegreesTableSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LicenseTableSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/LicenseTableSeeder.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="34" column="9" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="34" selection-end-column="9" />
               <folding>
-                <element signature="e#6#1064#0#PHP" expanded="false" />
+                <element signature="e#7#38#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CSV.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/CSV.php">
+      <file leaf-file-name="ShoulderSeeder.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/database/seeds/ShoulderSeeder.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4350">
-              <caret line="314" column="20" selection-start-line="314" selection-start-column="20" selection-end-line="314" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDFMerger.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/rguedes/pdfmerger/Classes/PDFMerger.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fpdf.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/vendor/rguedes/pdfmerger/Classes/fpdf/fpdf.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <marker date="1474388874624" expanded="false" signature="9:262" ph=" FPDF                                                                         * ..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DiscoverEtds.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Console/Commands/DiscoverEtds.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="382">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.env">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+            <state relative-caret-position="486">
+              <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -169,6 +707,13 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>date</find>
+      <find>st</find>
+      <find>asdfasdfasd</find>
+    </findStrings>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -180,16 +725,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/resources/assets/js/app.js" />
-        <option value="$PROJECT_DIR$/gulpfile.js" />
-        <option value="$PROJECT_DIR$/resources/assets/sass/app.scss" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_14_181236_create_proquest_submission_etds_table.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/login.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/auth/register.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/welcome.blade.php" />
-        <option value="$PROJECT_DIR$/resources/views/layouts/app.blade.php" />
-        <option value="$PROJECT_DIR$/app/Http/Controllers/Auth/AuthController.php" />
-        <option value="$PROJECT_DIR$/database/migrations/2016_03_15_143611_create_etd_ingest_errors_table.php" />
         <option value="$PROJECT_DIR$/app/Console/Commands/ProcessEtds.php" />
         <option value="$PROJECT_DIR$/config/session.php" />
         <option value="$PROJECT_DIR$/config/queue.php" />
@@ -208,22 +743,39 @@
         <option value="$PROJECT_DIR$/app/Degree.php" />
         <option value="$PROJECT_DIR$/database/seeds/License.php" />
         <option value="$PROJECT_DIR$/database/seeds/LicenseTableSeeder.php" />
-        <option value="$PROJECT_DIR$/config/app.php" />
         <option value="$PROJECT_DIR$/app/Http/rapyd.php" />
         <option value="$PROJECT_DIR$/resources/views/home.blade.php" />
-        <option value="[Connection] CONSOLE - Connection" />
         <option value="$PROJECT_DIR$/vendor/banetbi/ezid/Ezid.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" />
-        <option value="$PROJECT_DIR$/app/Http/routes.php" />
         <option value="$PROJECT_DIR$/config/mail.php" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-04-19.csv" />
         <option value="$PROJECT_DIR$/resources/views/etd/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/EtdController.php" />
-        <option value="$PROJECT_DIR$/resources/views/layout/master.blade.php" />
-        <option value="$PROJECT_DIR$/app/Console/Commands/GenerateEtdBatchUpload.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/DatasetController.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/master.blade.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/GenerateDOIBepressBatch.php" />
         <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/GenerateDOIBatch.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2016_12_07_175040_create_spreadsheet_table.php" />
+        <option value="$PROJECT_DIR$/resources/views/spreadsheet/create.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/spreadsheet/index.blade.php" />
+        <option value="$PROJECT_DIR$/config/app.php" />
+        <option value="$PROJECT_DIR$/app/Spreadsheet.php" />
+        <option value="$PROJECT_DIR$/app/Http/routes.php" />
+        <option value="$PROJECT_DIR$/resources/views/spreadsheet/show.blade.php" />
+        <option value="$PROJECT_DIR$/app/Console/Commands/GenerateEtdBatchUpload.php" />
+        <option value="$PROJECT_DIR$/app/Http/Controllers/SpreadsheetController.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_04_17_150000_create_shoulder_type_table.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ShoulderSeeder.php" />
+        <option value="$PROJECT_DIR$/database/migrations/2017_04_17_150021_create_shoulders_table.php" />
+        <option value="[Connection] CONSOLE - DOI Assistant" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/9c10125d-8af2-4cc0-bc2e-e74170cc5bd1/console.sql" />
+        <option value="[Connection] CONSOLE - Connection" />
+        <option value="$PROJECT_DIR$/app/ShoulderType.php" />
+        <option value="$PROJECT_DIR$/database/seeds/ShoulderTypeSeeder.php" />
+        <option value="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -261,18 +813,13 @@
     </gulpfiles>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="NodeModulesDirectoryManager">
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="PhpServers">
-    <servers />
+    <servers>
+      <server host="doiassist.endofinternet.org" id="389658c1-9c8c-49ad-a001-da89e81e3176" name="DOI Assistant" />
+    </servers>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true">
     <include_path>
@@ -347,20 +894,12 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="24" />
-    <option name="width" value="1920" />
-    <option name="height" value="1023" />
+    <option name="x" value="-1" />
+    <option name="y" value="-11" />
+    <option name="width" value="1922" />
+    <option name="height" value="1059" />
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <OptionsSetting value="true" id="Add" />
-    <OptionsSetting value="true" id="Remove" />
-    <OptionsSetting value="true" id="Checkout" />
-    <OptionsSetting value="true" id="Update" />
-    <OptionsSetting value="true" id="Status" />
-    <OptionsSetting value="true" id="Edit" />
-    <ConfirmationsSetting value="0" id="Add" />
-    <ConfirmationsSetting value="0" id="Remove" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -376,15 +915,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="doi_assistant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -396,29 +937,230 @@
               <option name="myItemId" value="doi_assistant" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="seeds" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrations" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="database" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="factories" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Http" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="doi_assistant" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Console" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Commands" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="aspect.path.notification.shown" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="/usr/bin/node" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
-    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$USER_HOME$/auth-cas.phar" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.language" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="two.files.diff.last.used.file" value="$USER_HOME$/src/TuckerAlmancksMetadata.csv" />
+    <property name="nodejs_interpreter_path" value="/usr/bin/node" />
+    <property name="js.eslint.eslintPackage" value="" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="GO_FMT" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/resources/views/spreadsheet" />
       <recent name="$PROJECT_DIR$/resources/views/etd" />
       <recent name="$PROJECT_DIR$/public/fonts" />
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="PHP Web Application.DOI Assist">
     <configuration default="true" type="#PerlConfigurationType" factoryName="Perl" show_console_on_std_err="false" show_console_on_std_out="false">
       <option name="alternativeSdkPath" />
       <option name="compileTimeBreakpointsEnabled" value="false" />
@@ -455,19 +1197,20 @@
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
       <method />
     </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
       <option name="ARTIFACT_NAME" value="" />
       <option name="PM_INSTALL_OPTIONS" value="" />
       <option name="ACTIVITY_EXTRA_FLAGS" value="" />
       <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
       <option name="PREFERRED_AVD" value="" />
       <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
       <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
       <option name="FORCE_STOP_RUNNING_APP" value="true" />
       <option name="DEBUGGER_TYPE" value="Java" />
@@ -475,7 +1218,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
       <option name="ACTIVITY_CLASS" value="" />
@@ -500,7 +1247,11 @@
       <option name="PREFERRED_AVD" value="" />
       <Java />
       <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
         <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
       </Profilers>
       <method />
     </configuration>
@@ -586,6 +1337,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="Cold Fusion runner description" factoryName="Cold Fusion" custom_browser="" web_path="">
+      <method />
+    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="myFilePath" />
@@ -603,6 +1357,46 @@
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
+      <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
+      <module name="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
+      <method />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
       <method />
     </configuration>
     <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
@@ -674,6 +1468,26 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <kind value="FILE" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoRunFileConfiguration" factoryName="Go Single File">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <filePath value="$PROJECT_DIR$" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -695,8 +1509,40 @@
       <setting name="cmdLine" value="run-app" />
       <setting name="passParentEnv" value="true" />
       <setting name="launchBrowser" value="false" />
+      <setting name="launchBrowserUrl" value="" />
       <setting name="depsClasspath" value="false" />
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JRubyCucumberRunConfigurationType" factoryName="JRuby Cucumber">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" value="-Dforce.jruby.jit=true -Djruby.debug.fullTrace=true" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*.feature" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_TAGS_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="TEST_NAME_FILTER" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_ARGS" VALUE="--color -r features" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="VERBOSE_OPTION" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
+      <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
       <method />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
@@ -711,27 +1557,6 @@
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="JUnitTestDiscovery" factoryName="JUnit Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
@@ -759,6 +1584,19 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
       <envs />
       <method />
     </configuration>
@@ -790,11 +1628,17 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application">
       <method />
     </configuration>
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
@@ -841,6 +1685,38 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
+      <predefined_log_file id="RUBY_RSPEC" enabled="true" />
+      <module name="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_RUNNER_PATH" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="**/*_spec.rb" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_EXAMPLE_NAME" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPEC_ARGS" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_VERSION" VALUE="" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
       <method />
     </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
@@ -849,6 +1725,44 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -885,32 +1799,31 @@
       <listeners />
       <method />
     </configuration>
-    <configuration default="true" type="TestNGTestDiscovery" factoryName="TestNG Test Discovery" changeList="All">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
+      <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
       <module name="" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
       <envs />
-      <properties />
-      <listeners />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" NailgunExecEnabled="false" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TESTS_FOLDER_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_SCRIPT_PATH" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_FILE_MASK" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_METHOD_NAME" VALUE="" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="ZEUS" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="SPRING" VALUE="false" />
+      <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
       <method />
     </configuration>
     <configuration default="true" type="Tox" factoryName="Tox">
@@ -952,36 +1865,29 @@
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
+      <command value="run" />
       <scripts />
       <node-interpreter value="project" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
       <method />
     </configuration>
     <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
-      <method />
-    </configuration>
-    <configuration default="true" type="tests" factoryName="Attests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="doi_assistant" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Doctests">
@@ -1015,15 +1921,10 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="doi_assistant" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_regexPattern" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
@@ -1037,19 +1938,54 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="doi_assistant" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="FOLDER_NAME" value="" />
-      <option name="TEST_TYPE" value="TEST_SCRIPT" />
-      <option name="PATTERN" value="" />
-      <option name="USE_PATTERN" value="false" />
-      <option name="PUREUNITTEST" value="true" />
-      <option name="PARAMS" value="" />
-      <option name="USE_PARAM" value="false" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="doi_assistant" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;.&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <setting name="useSbt" value="false" />
+      <setting name="useUiWithSbt" value="false" />
+      <classRegexps />
+      <testRegexps />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="DOI Assist" type="PhpWebAppRunConfigurationType" factoryName="PHP Web Application" server_name="DOI Assistant">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Web Application.DOI Assist" />
+    </list>
+    <configuration default="true" type="tests" factoryName="Attests">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs />
@@ -1067,11 +2003,30 @@
       <option name="TEST_TYPE" value="TEST_SCRIPT" />
       <option name="PATTERN" value="" />
       <option name="USE_PATTERN" value="false" />
-      <option name="testToRun" value="" />
-      <option name="keywords" value="" />
-      <option name="params" value="" />
-      <option name="USE_PARAM" value="false" />
-      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="GAPID_DISABLE_PCS" value="false" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
       <method />
     </configuration>
   </component>
@@ -1146,57 +2101,102 @@
       <workItem from="1470920746472" duration="11000" />
       <workItem from="1471028319869" duration="11000" />
       <workItem from="1477067094984" duration="768000" />
+      <workItem from="1477334272950" duration="43000" />
+      <workItem from="1477334434149" duration="5496000" />
+      <workItem from="1477408276567" duration="726000" />
+      <workItem from="1477500410446" duration="1196000" />
+      <workItem from="1477670575979" duration="54000" />
+      <workItem from="1478708706117" duration="1935000" />
+      <workItem from="1481128906300" duration="6659000" />
+      <workItem from="1481297879235" duration="600000" />
+      <workItem from="1481565539758" duration="26000" />
+      <workItem from="1481565596021" duration="1439000" />
+      <workItem from="1484757133085" duration="2092000" />
+      <workItem from="1484770267236" duration="39000" />
+      <workItem from="1484770328970" duration="43000" />
+      <workItem from="1484834001800" duration="13000" />
+      <workItem from="1484834034747" duration="8000" />
+      <workItem from="1485183129958" duration="19000" />
+      <workItem from="1485183172744" duration="7008000" />
+      <workItem from="1485274772664" duration="615000" />
+      <workItem from="1485289782306" duration="8000" />
+      <workItem from="1485292410986" duration="6000" />
+      <workItem from="1485544888506" duration="700000" />
+      <workItem from="1485794819578" duration="119000" />
+      <workItem from="1485794977998" duration="71000" />
+      <workItem from="1491917042612" duration="11949000" />
+      <workItem from="1492010413141" duration="112000" />
+      <workItem from="1492010615598" duration="4045000" />
+      <workItem from="1492174502837" duration="3874000" />
+      <workItem from="1492190153484" duration="762000" />
+      <workItem from="1492190921872" duration="648000" />
+      <workItem from="1492191631970" duration="428000" />
+      <workItem from="1492192109960" duration="610000" />
+      <workItem from="1492436402310" duration="26000" />
+      <workItem from="1492436449193" duration="8350000" />
+      <workItem from="1492622578004" duration="24000" />
+      <workItem from="1492622627922" duration="667000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="145502000" />
+    <option name="totallyTimeSpent" value="205912000" />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="1">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
     <todo-panel id="all">
       <are-packages-shown value="true" />
+      <flatten-packages value="true" />
       <is-autoscroll-to-source value="true" />
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="1920" height="1023" extended-state="6" />
-    <editor active="false" />
+    <frame x="-1" y="-11" width="1922" height="1059" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18763326" sideWeight="0.45708156" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="IView" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3275862" sideWeight="0.5021322" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Execution Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280899" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3258427" sideWeight="0.5021322" order="13" side_tool="true" content_ui="tabs" x="1153" y="260" width="1872" height="300" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32832617" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18443497" sideWeight="0.57081544" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31891027" sideWeight="0.6034858" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="ReST Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31891027" sideWeight="0.39651415" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Mongo Explorer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16773504" sideWeight="0.579661" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50429183" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39978212" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33932585" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1875" sideWeight="0.44444445" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="IView" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33707866" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32822758" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="WINDOWED" visible="false" show_stripe_button="true" weight="0.3278867" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" x="1920" y="24" width="1920" height="1143" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18443497" sideWeight="0.57081544" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28258547" sideWeight="0.420339" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="ReST Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32959402" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.50429183" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32921347" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32939914" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -1211,11 +2211,12 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Fixed missing glyphicons. &#10;Refactored to split out ETD and Dataset managment.&#10;Added email sending to batch upload generation using mailgun." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed missing glyphicons. &#10;Refactored to split out ETD and Dataset managment.&#10;Added email sending to batch upload generation using mailgun." />
+    <MESSAGE value="Added spreadsheet upload and most of processing for registration." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added spreadsheet upload and most of processing for registration." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1224,367 +2225,419 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_23_161154_create_licenses_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="17" column="34" selection-start-line="17" selection-start-column="34" selection-end-line="17" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/DegreesTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="930">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Kernel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/License.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/seeds/LicenseTableSeeder.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zofe/rapyd/src/DataSet.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="47" column="27" selection-start-line="47" selection-start-column="27" selection-end-line="47" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/rapyd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="53" selection-start-line="20" selection-start-column="53" selection-end-line="20" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/zofe/rapyd/src/Demo/DemoController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2625">
-          <caret line="176" column="39" selection-start-line="176" selection-start-column="39" selection-end-line="176" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/ProquestSubmissionEtd.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="db://[Connection] SESSION BROWSER - Connection" />
     <entry file="db://[Connection] CONSOLE - Connection" />
-    <entry file="file://$PROJECT_DIR$/app/Jobs/IngestEtd.php">
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_14_181236_create_proquest_submission_etds_table.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="420">
+          <caret line="29" column="30" lean-forward="true" selection-start-line="29" selection-start-column="30" selection-end-line="29" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-720">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/league/flysystem/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-111">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/psr/log/composer.json">
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateDOIBepressBatch.php" />
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateDOIBatch.php" />
+    <entry file="file://$PROJECT_DIR$/.env.example">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/symfony/console/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/banetbi/ezid/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/banetbi/ezid/Ezid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/node_modules/bootstrap-sass/assets/stylesheets/_bootstrap.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" column="25" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/assets/sass/app.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layouts/app.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/home.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="70" selection-start-line="26" selection-start-column="70" selection-end-line="26" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/services.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/welcome.blade.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/etd_batch_upload/etd_batch_upload.2016-04-19.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout/master.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="32" column="46" selection-start-line="32" selection-start-column="46" selection-end-line="32" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/etds/etdadmin_upload_412085/Williams_wmed_0261F_10000_DATA.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1200">
-          <caret line="60" column="71" selection-start-line="60" selection-start-column="22" selection-end-line="60" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/etd/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="5" column="29" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
+        <state relative-caret-position="90">
+          <caret line="5" column="29" lean-forward="false" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/src/TuckerAlmancksMetadata.csv">
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Support/Facades/Storage.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/TuckerAlmancksMetadata.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="8" column="90" selection-start-line="8" selection-start-column="90" selection-end-line="8" selection-end-column="90" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/IOFactory.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="160" column="27" selection-start-line="160" selection-start-column="27" selection-end-line="160" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateEtdBatchUpload.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3440">
-          <caret line="383" column="53" selection-start-line="383" selection-start-column="53" selection-end-line="383" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/DatasetController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="19" column="8" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_14_181236_create_proquest_submission_etds_table.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="22" column="52" selection-start-line="22" selection-start-column="52" selection-end-line="22" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/IReader.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/SYLK.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#1064#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/phpoffice/phpexcel/Classes/PHPExcel/Reader/CSV.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4350">
-          <caret line="314" column="20" selection-start-line="314" selection-start-column="20" selection-end-line="314" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/rguedes/pdfmerger/Classes/PDFMerger.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/rguedes/pdfmerger/Classes/fpdf/fpdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1474388874624" expanded="false" signature="9:262" ph=" FPDF                                                                         * ..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/app.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="7">
-          <caret line="158" column="47" selection-start-line="158" selection-start-column="47" selection-end-line="158" selection-end-column="47" />
-          <folding />
+        <state relative-caret-position="105">
+          <caret line="7" column="6" lean-forward="false" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/config/filesystems.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="144">
+          <caret line="47" column="32" lean-forward="false" selection-start-line="47" selection-start-column="32" selection-end-line="47" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/app.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3744">
+          <caret line="208" column="20" lean-forward="false" selection-start-line="208" selection-start-column="20" selection-end-line="208" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/HomeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="7" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/database.php">
+    <entry file="file://$PROJECT_DIR$/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-263">
-          <caret line="59" column="49" selection-start-line="59" selection-start-column="27" selection-end-line="59" selection-end-column="49" />
-          <folding />
+        <state relative-caret-position="-84">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/EtdController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="15" column="40" selection-start-line="15" selection-start-column="40" selection-end-line="15" selection-end-column="40" />
+        <state relative-caret-position="90">
+          <caret line="5" column="31" lean-forward="false" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spreadsheet/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="56" lean-forward="false" selection-start-line="15" selection-start-column="56" selection-end-line="15" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spreadsheet/create.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="10" column="24" lean-forward="false" selection-start-line="10" selection-start-column="24" selection-end-line="14" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/laravel/framework/src/Illuminate/Http/Request.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-486">
+          <caret line="15" column="6" lean-forward="false" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_PLUGINS_DIR$/php/lib/php.jar!/stubs/standard/standard_1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="551" column="9" lean-forward="false" selection-start-line="551" selection-start-column="9" selection-end-line="551" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1152">
+          <caret line="6" column="4" lean-forward="false" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="36" column="38" lean-forward="true" selection-start-line="36" selection-start-column="38" selection-end-line="36" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="3150" column="27" lean-forward="false" selection-start-line="3150" selection-start-column="27" selection-end-line="3150" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/rapyd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="16" column="2" lean-forward="false" selection-start-line="16" selection-start-column="2" selection-end-line="16" selection-end-column="2" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Console/Commands/DiscoverEtds.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
-          <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+        <state relative-caret-position="129">
+          <caret line="38" column="5" lean-forward="false" selection-start-line="38" selection-start-column="5" selection-end-line="38" selection-end-column="5" />
+          <folding>
+            <element signature="e#49#81#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Console/Commands/GenerateEtdBatchUpload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="610">
+          <caret line="403" column="5" lean-forward="false" selection-start-line="363" selection-start-column="4" selection-end-line="403" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/spreadsheet/show.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="589">
+          <caret line="42" column="82" lean-forward="false" selection-start-line="42" selection-start-column="82" selection-end-line="42" selection-end-column="82" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Http/Controllers/SpreadsheetController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="110" column="0" lean-forward="false" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.env">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="51" selection-start-line="19" selection-start-column="51" selection-end-line="19" selection-end-column="51" />
+        <state relative-caret-position="648">
+          <caret line="36" column="31" lean-forward="false" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_12_07_175040_create_spreadsheets_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="19" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2016_03_23_161154_create_licenses_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="29" column="33" lean-forward="false" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_04_17_150000_create_shoulder_type_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="27" column="5" lean-forward="false" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://[Connection] CONSOLE - DOI Assistant" />
+    <entry file="db://[Connection] SESSION BROWSER - Connection" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/9c10125d-8af2-4cc0-bc2e-e74170cc5bd1/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="db://[Connection] CONSOLE - Connection" />
+    <entry file="db://[Connection] CONSOLE - Connection" />
+    <entry file="db://[Connection] CONSOLE - Connection" />
+    <entry file="db://[Connection] CONSOLE - Connection" />
+    <entry file="file://$PROJECT_DIR$/database/migrations/2017_04_17_150021_create_shoulders_table.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="12" column="24" lean-forward="true" selection-start-line="12" selection-start-column="24" selection-end-line="12" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ProquestSubmissionEtd.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="6" lean-forward="false" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/License.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/EtdIngestError.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Degree.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Spreadsheet.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Shoulder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/ShoulderType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="39" lean-forward="false" selection-start-line="8" selection-start-column="39" selection-end-line="8" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/LicenseTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="34" column="9" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="34" selection-end-column="9" />
+          <folding>
+            <element signature="e#7#38#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DegreesTableSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ShoulderSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="27" column="33" lean-forward="false" selection-start-line="27" selection-start-column="33" selection-end-line="27" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/ShoulderTypeSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="10" lean-forward="false" selection-start-line="13" selection-start-column="10" selection-end-line="13" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/database/seeds/DatabaseSeeder.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Python</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>stub [puppet module]</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>doi_assistant</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

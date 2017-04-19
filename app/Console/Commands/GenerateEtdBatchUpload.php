@@ -169,12 +169,13 @@ class GenerateEtdBatchUpload extends Command
         $arrMetadataRow[] = $strFilteredTitle;
         //$strMetadataRow .= "'" . $strFilteredTitle . "',";
         $arrMetadata['datacite.title'] = $strFilteredTitle;
-        
-        try{
-            $this->addSignaturePage($this->objCurrentSubmission->document_path, $this->objCurrentSubmission->dissertation_defense_path);
-        }
-        catch(\Exception $e) {
-            throw new \Exception($e->getMessage());
+        if($this->objCurrentSubmission->dissertation_defense_path != '') {
+            try{
+                $this->addSignaturePage($this->objCurrentSubmission->document_path, $this->objCurrentSubmission->dissertation_defense_path);
+            }
+            catch(\Exception $e) {
+                throw new \Exception($e->getMessage());
+            }
         }
         $arrMetadataRow[] = getenv('SERVER_HOME') . '/etds/' . $objContent->DISS_binary;
         //$strMetadataRow .= "'" . getenv('SERVER_HOME') . '/etds/' . $objContent->DISS_binary . "',";
@@ -200,7 +201,7 @@ class GenerateEtdBatchUpload extends Command
         else {
             $arrMetadataRow[] = $strMiddleHolder;
         }
-        $arrMetadataRow[] = $objAuthorship->DISS_author->DISS_name->DISS_middle->__toString();
+        //$arrMetadataRow[] = $objAuthorship->DISS_author->DISS_name->DISS_middle->__toString();
         $arrMetadataRow[] = $objAuthorship->DISS_author->DISS_name->DISS_surname->__toString();
         $arrMetadataRow[] = $objAuthorship->DISS_author->DISS_name->DISS_suffix->__toString();
         $arrMetadataRow[] = $objAuthorship->DISS_author->DISS_contact[0]->DISS_email->__toString();
@@ -309,6 +310,7 @@ class GenerateEtdBatchUpload extends Command
         $arrMetadata['datacite.resourcetype'] = 'Text';
         $arrMetadata['_target'] = getenv('ETD_IR_BASEURL') . '/' . $strLabelTime;
 
+        $strDOI = '';
         try {
             $strDOI = $this->createDOI($arrMetadata, $strLabelTime, Ezid::IDENTIFIER_TYPE_DOI, $objDescription->DISS_institution->DISS_inst_name);
         } catch (\Exception $e) {
@@ -335,9 +337,16 @@ class GenerateEtdBatchUpload extends Command
         elseif((string)$objXMLMetadata->attributes()->embargo_code === '4') {
             $arrMetadataRow[] = $objRepository->DISS_delayed_release;
         }
+        elseif((string)$objRestrictions->DISS_sales_restriction->attributes()->remove != '') {
+            $arrMetadataRow[] = $objRestrictions->DISS_sales_restriction->attributes()->remove;
+        }
+        else {
+            $arrMetadataRow[] = '';
+        }
+
 
         $arrMetadataRow[] = $this->getLanguageByAbbreviation($objDescription->DISS_categorization->DISS_language);
-        $arrMetadataRow[] = "";
+        $arrMetadataRow[] = $objAuthorship->DISS_author->DISS_orcid;
         $arrAgreementDecisionDate = explode(" ", $objRepository->DISS_agreement_decision_date);
 
         $arrMetadataRow[] = $arrAgreementDecisionDate[0];
@@ -368,6 +377,9 @@ class GenerateEtdBatchUpload extends Command
                 break;
             case "College of William and Mary - Arts & Sciences":
                 $strDOIShoulder = getenv('DOI_SHOULDER_AS');
+                break;
+            case "College of William and Mary - Virginia Institute of Marine Science":
+                $strDOIShoulder = getenv('DOI_SHOULDER_VIMS');
                 break;
             default:
                 $strDOIShoulder = getenv('DOI_SHOULDER');

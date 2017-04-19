@@ -26,9 +26,6 @@ Route::get('/', function () {
 |
 */
 
-Route::group(['middleware' => ['web']], function () {
-
-});
 
 Route::group(['middleware' => 'web'], function () {
     Route::auth();
@@ -36,4 +33,9 @@ Route::group(['middleware' => 'web'], function () {
     Route::get('/home', 'HomeController@index');
     Route::get('/etd', 'EtdController@index');
     Route::get('/dataset', 'DatasetController@index');
+    Route::get('/spreadsheet', 'SpreadsheetController@index');
+    Route::get('/spreadsheet/upload-spreadsheet', 'SpreadsheetController@create');
+    Route::post('/spreadsheet/upload-spreadsheet', 'SpreadsheetController@store');
+    Route::get('/spreadsheet/show/{id}', 'SpreadsheetController@show');
+    Route::post('/spreadsheet/process-spreadsheet', 'SpreadsheetController@register');
 });

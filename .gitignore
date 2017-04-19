@@ -4,3 +4,10 @@
 Homestead.yaml
 Homestead.json
 .env
+/resources/etds/
+.idea/dataSources.local.xml
+public/datasets/
+resources/etd_batch_revise/
+resources/etds/etdadmin_upload_fake/
+resources/views/dataset/
+/resources/etd_batch_upload/

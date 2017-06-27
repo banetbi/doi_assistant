@@ -2,6 +2,7 @@
 
 namespace DoiAssistant\Http\Controllers;
 
+use DoiAssistant\Jobs\ProcessSpreadsheet;
 use Illuminate\Http\Request;
 
 use DoiAssistant\Http\Requests;
@@ -13,6 +14,7 @@ use PHPExcel;
 use PHPExcel_IOFactory;
 use banetbi\ezid\Ezid;
 use Mail;
+use Carbon\Carbon;
 
 class SpreadsheetController extends Controller
 {
@@ -59,63 +61,9 @@ class SpreadsheetController extends Controller
     }
 
     public function register(Request $objRequest) {
-        $strResponse = '';
-        foreach($objRequest->all() as $key => $value) {
-            if($value != '-----') {
-                $strRealKey = substr($key, 0, -12);
-                $strResponse .= "$strRealKey is $value<br />\n";
-            }
-        }
-
-        $objSpreadsheet = Spreadsheet::find($objRequest->get('id'));
-        $fileXLSInput = PHPExcel_IOFactory::load('/var/www/doi_assistant/storage/app/' . $objSpreadsheet->document_path);
-        $arrSheetData = $fileXLSInput->getActiveSheet()->toArray(null, true, true, true);
-
-        $arrSheetLayout = array();
-        $arrHeaderRow = $arrSheetData[1];
-        foreach($objRequest->all() as $key => $value) {
-            if($value != '-----' && $key != 'id') {
-                $strRealKey = substr($key, 0, -12);
-                if($strRealKey != '' && $objRequest->exists($strRealKey)) {
-                    foreach ($arrHeaderRow as $intHeaderKey => $strHeaderValue) {
-                        if ($strRealKey == $strHeaderValue) {
-                            $arrSheetLayout[$intHeaderKey] = $strRealKey;
-                        }
-                    }
-                }
-            }
-        }
-        $strOutput = '';
-        $strOutput .= $strResponse . "\n";
-        foreach($arrSheetData as $arrRow) {
-            $arrMetadata = array();
-            $strOutput .= var_dump($arrSheetLayout);
-            foreach($arrSheetLayout as $column => $value) {
-                //$strOutput .= var_dump($arrRow);
-                if($value == 'title') {
-                    $strOutput .= var_dump($arrRow);
-                    $strFilteredTitle = mb_convert_case(strtolower($arrRow[$column]), MB_CASE_TITLE, "UTF-8");
-                    $arrMetadata['datacite.title'] = $strFilteredTitle;
-                } elseif($value == 'publication_date') {
-                    $arrMetadata['datacite.publicationyear'] = date('Y', strtotime($arrRow[$column]));
-                } elseif($value == 'fulltext_url') {
-                    $arrMetadata['_target'] = $arrRow[$column];
-                }
-
-                $arrMetadata['datacite.resourcetype'] = 'Text';
-                if($value == 'creator_firstname') {
-                    $arrMetadata['datacite.creator'] = $arrRow[$arrSheetLayout['creator_firstname']] . ' ' . $arrRow[$arrSheetLayout['creator_lastname']];
-                } elseif($value == 'creator') {
-                    $arrMetadata['datacite.creator'] = $arrRow[$column];
-                }
-                $arrMetadata['datacite.publisher'] = $objDescription->DISS_institution->DISS_inst_name->__toString();
-                //$strOutput .= $value .= ': ' . $arrRow[$column] . ', ';
-            }
-            $strOutput .= var_dump($arrMetadata);
-
-        }
-        return var_dump($strOutput);
-
+        $job = (new ProcessSpreadsheet($objRequest->all()))->delay(Carbon::now()->addMinutes(5));
+        dispatch($job);
+        return redirect('/spreadsheet');
     }
 
     /**
@@ -142,14 +90,14 @@ class SpreadsheetController extends Controller
                 $strDOIShoulder = getenv('DOI_SHOULDER');
                 $strArkShoulder = getenv('ARK_SHOULDER');
         }
-        $this->info(getenv('EZID_USERNAME') . ' ' .  getenv('EZID_PASSWORD') . ' ' .  $strDOIShoulder . ' ' . $strArkShoulder);
+        //$this->info(getenv('EZID_USERNAME') . ' ' .  getenv('EZID_PASSWORD') . ' ' .  $strDOIShoulder . ' ' . $strArkShoulder);
         $objEzid = new Ezid(getenv('EZID_USERNAME'), getenv('EZID_PASSWORD'), $strDOIShoulder, $strArkShoulder);
         $strResponse = $objEzid->mintIdentifier($strDOIShoulder, $intIdentifierType, $arrMetadata);
         if(strpos($strResponse, 'success') !== false) {
             $arrResponse = explode('|', $strResponse);
             $arrDOI = explode(" ", $arrResponse[0]);
-            $this->info(print_r($strResponse));
-            $this->info("DOI is " . $arrDOI[1] . "\n");
+            //$this->info(print_r($strResponse));
+            //$this->info("DOI is " . $arrDOI[1] . "\n");
             return 'http://dx.doi.org/' . $arrDOI[1];
         }
         else {

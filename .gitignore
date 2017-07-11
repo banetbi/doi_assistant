@@ -1,11 +1,13 @@
 /vendor
 /node_modules
 /public/storage
+/public/etds
 Homestead.yaml
 Homestead.json
 .env
 /resources/etds/
 .idea/dataSources.local.xml
+.idea
 public/datasets/
 resources/etd_batch_revise/
 resources/etds/etdadmin_upload_fake/

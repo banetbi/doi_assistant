@@ -159,6 +159,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
 
         Zofe\Rapyd\RapydServiceProvider::class,
+        Orangehill\Iseed\IseedServiceProvider::class,
 
     ],
 

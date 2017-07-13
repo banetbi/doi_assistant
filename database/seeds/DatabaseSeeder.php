@@ -13,5 +13,6 @@ class DatabaseSeeder extends Seeder
     {
         //$this->call(ShoulderTypeSeeder::class);
         //$this->call(ShoulderSeeder::class);
+        $this->call('SubjectCrosswalkTableSeeder');
     }
 }

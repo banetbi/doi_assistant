@@ -12,3 +12,4 @@ resources/etd_batch_revise/*
 resources/etds/etdadmin_upload_fake/
 resources/views/dataset/*
 /resources/etd_batch_upload/*
+doi_assistant.iml

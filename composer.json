@@ -12,7 +12,8 @@
         "banetbi/ezid": "dev-master",
         "guzzlehttp/guzzle": "^6.2",
         "rguedes/pdfmerger": "dev-master",
-        "laravelcollective/html": "^5.2.0"
+        "laravelcollective/html": "^5.2.0",
+	"orangehill/iseed": "2.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",

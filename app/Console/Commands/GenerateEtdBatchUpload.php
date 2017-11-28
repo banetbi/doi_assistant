@@ -317,7 +317,7 @@ class GenerateEtdBatchUpload extends Command
             $this->error($e->getMessage());
             $strDOI = '';
         }
-        if(substr($strDOI, 0, 1) !== 'd') {
+        if(substr($strDOI, 0, 1) !== 'h') {
             $strDOI = "";
         }
         $arrMetadataRow[] = $strDOI;
@@ -511,5 +511,14 @@ class GenerateEtdBatchUpload extends Command
             $season = "Winter";
         }
         return $season;
+    }
+
+    /**
+     * Get the discipline(Digital Commons) based on the ProQuest Code
+     * @param string $strProquestCode
+     * @return string
+     */
+    private function crosswalkDiscipline($strProquestCode) {
+
     }
 }

@@ -2,6 +2,7 @@
 /node_modules
 /public/storage/*
 /public/etds/*
+/public/theses/*
 Homestead.yaml
 Homestead.json
 .env
